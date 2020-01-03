@@ -4,4 +4,6 @@
 
 # Remove app controller and service and app.spec files.
 
-# Run -> npm run start dev
+# Run -> npm run start:dev
+
+# Make an new module ->nest g module task
