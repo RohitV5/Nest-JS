@@ -23,3 +23,11 @@
 
 # We created a service , injected it in a controller , then we hit the endpoint from postman
 
+# TYPE ANNOTATION
+# types (interfaces) helps us to better design our application, also gives compilation error if dont follow the design. The object below is of type task and the function is returning a value of type task. Both are arrays.
+#   private tasks: Task[] = [];
+#    getAllTasks(): Task[]{}
+
+
+
+
