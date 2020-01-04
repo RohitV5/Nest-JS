@@ -15,3 +15,8 @@
 # nest g controller tasks --no-spec
 
 # Nest saves us from writing boilerplate code.
+
+# Next we create a service using cli
+# nest g service tasks --no-spec
+# --no-spec is used so that it doesnt create a test file.
+
