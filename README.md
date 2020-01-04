@@ -20,3 +20,6 @@
 # nest g service tasks --no-spec
 # --no-spec is used so that it doesnt create a test file.
 
+
+# We created a service , injected it in a controller , then we hit the endpoint from postman
+
