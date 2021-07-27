@@ -1,6 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import { Task, TaskStatus } from './tasks.model';
 import * as uuid from 'uuid/v1'
+import { CreateTaskDto } from './dto/create-task.dto';
 
 @Injectable()
 export class TasksService {
@@ -13,7 +14,9 @@ export class TasksService {
         return this.tasks;
     }
 
-    createTask(title: string, description: string) {
+    createTask(createTaskDto:CreateTaskDto) {
+
+        const {title, description}  = createTaskDto;
         // when key and argument have same value we can use a shorthand. ES6 Feature
         const task: Task = { id: uuid(), title, description, status: TaskStatus.OPEN };
 
