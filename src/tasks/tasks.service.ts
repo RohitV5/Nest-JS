@@ -14,6 +14,16 @@ export class TasksService {
         return this.tasks;
     }
 
+    getTaskById(id:string): Task {
+        return this.tasks.find((task)=> task.id === id)
+    }
+
+    deleteTask(id:string): void{
+        this.tasks = this.tasks.filter((task)=> task.id !== id)
+    }
+
+
+
     createTask(createTaskDto:CreateTaskDto) {
 
         const {title, description}  = createTaskDto;
@@ -23,6 +33,12 @@ export class TasksService {
         this.tasks.push(task);
         return task;
         // its good to return the updated task because the front end will use this returned value to update the UI instead of hitting extra API.
+    }
+
+    updateTaskStatus(id: string, status:TaskStatus){
+        const task = this.getTaskById(id);
+        task.status = status;
+        return task
     }
 
 }
