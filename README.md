@@ -104,6 +104,27 @@ Nest is [MIT licensed](LICENSE).
 #    getAllTasks(): Task[]{}
 
 
+# Docker cmd
 
+to start
+docker run --name postgres-nest -p 5432:5432 -e POSTGRES_PASSWORD=postgres  -d postgres
+post mapped containers 5432 to host ie my windows machine 5432
+-e mean environment variable that mean m setting postgres password as postgres for learning purpose.
+
+to view all docker containers
+docker container ls
+
+to stop container run
+docker container stop postgres-nest
+
+to delete the container
+docker container rm postgres-nest
+
+
+we will use pgAdmin to connect with our db.
+
+
+See this video for fixing pgadmin v4
+https://www.youtube.com/watch?v=L2UO_slnDbk
 
 
