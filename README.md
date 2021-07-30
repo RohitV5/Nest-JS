@@ -128,3 +128,9 @@ See this video for fixing pgadmin v4
 https://www.youtube.com/watch?v=L2UO_slnDbk
 
 
+Active Record vs Data Mapper
+
+Data Mapper allows for more maintainable and cleaner code.
+So we wil follow that approach.
+
+
