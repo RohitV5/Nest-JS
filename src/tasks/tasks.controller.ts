@@ -62,5 +62,14 @@ export class TasksController {
   //   const {status} = updateTaskStatusDto;
   //   return this.tasksService.updateTaskStatus(id, status);
   // }
+
+  @Patch('/:id')
+  updateTaskStatus(
+    @Param('id') id:string,
+    @Body() updateTaskStatusDto: UpdateTaskStatusDto,
+  ):Promise<Task>{
+    const {status} = updateTaskStatusDto;
+    return this.tasksService.updateTaskStatus(id, status);
+  }
 }
 

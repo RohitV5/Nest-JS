@@ -78,6 +78,19 @@ export class TasksService {
     //     return task
     // }
 
+    async updateTaskStatus(id: string, status:TaskStatus){
+        const task = await this.getTaskById(id);
+
+
+        task.status = status;
+
+        await this.tasksRepository.save(task);
+
+        return task
+    }
+
+
+
     // getTasksWithFilters(filterDto: GetTaskFilterDto){
     //    const {status, search} = filterDto;
 
