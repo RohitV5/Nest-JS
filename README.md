@@ -134,3 +134,13 @@ Data Mapper allows for more maintainable and cleaner code.
 So we wil follow that approach.
 
 
+Create an entity which is acutually a table definition.
+
+Create a repository foe each entity which acutaully is used to interact with this table.
+
+
+
+Change icon vscode // custom shortcut
+
+ctrl + alt + shift + m
+
