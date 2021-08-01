@@ -144,3 +144,18 @@ Change icon vscode // custom shortcut
 
 ctrl + alt + shift + m
 
+
+
+RSA -private and public keys
+
+SHA256- For hashing password with salt
+
+
+bcrypt uses a unique salt per record per user.
+
+that salt is present the password itself and not required to save seperately.
+
+
+
+
+
