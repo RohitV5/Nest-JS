@@ -151,7 +151,7 @@ RSA -private and public keys
 SHA256- For hashing password with salt
 
 
-bcrypt uses a unique salt per record per user.
+bcrypt uses a unique salt per record per user and hence better compared to SHA256.
 
 that salt is present the password itself and not required to save seperately.
 
