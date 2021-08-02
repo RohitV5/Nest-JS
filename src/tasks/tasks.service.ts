@@ -33,8 +33,8 @@ export class TasksService {
     //     return this.tasks;
     // }
 
-    getTasks(filterDto?: GetTaskFilterDto):Promise<Task[]> {
-        return this.tasksRepository.getTasks(filterDto)
+    getTasks(filterDto: GetTaskFilterDto, user:User):Promise<Task[]> {
+        return this.tasksRepository.getTasks(filterDto,user)
     }
 
     async getTaskById(id:string): Promise<Task>{
