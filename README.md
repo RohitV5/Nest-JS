@@ -134,3 +134,45 @@ Data Mapper allows for more maintainable and cleaner code.
 So we wil follow that approach.
 
 
+Create an entity which is acutually a table definition.
+
+Create a repository foe each entity which acutaully is used to interact with this table.
+
+
+
+Change icon vscode // custom shortcut
+
+ctrl + alt + shift + m
+
+
+
+RSA -private and public keys
+
+SHA256- For hashing password with salt
+
+
+bcrypt uses a unique salt per record per user and hence better compared to SHA256.
+
+that salt is present the password itself and not required to save seperately.
+
+
+JWT - used for Authorization and verifying user who they claims to be
+
+consist of three part
+Header.Payload.Signature
+
+Created using a secret only we know.
+
+JWT be short lived.
+
+We will use PassportJs for this purpose. which is a middleware package for nodejs.
+
+@nestjs/jwt - jwt package allows integration with nest js
+@nestjs/passport - integrates the passport with nestjs ecosystem
+passport - pure passport library
+passport-jwt -  strategy for passport jwt
+
+
+
+
+
