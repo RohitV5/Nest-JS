@@ -172,6 +172,8 @@ We will use PassportJs for this purpose. which is a middleware package for nodej
 passport - pure passport library
 passport-jwt -  strategy for passport jwt
 
+To run dev mode
+npm run start:dev
 
 
 

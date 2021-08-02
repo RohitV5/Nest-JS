@@ -7,13 +7,16 @@ import { Task } from './dto/task.entity';
 import { AuthGuard } from '@nestjs/passport';
 import { GetUser } from 'src/auth/get-user.decorator';
 import { User } from 'src/auth/user.entity';
+import { ConfigService } from '@nestjs/config';
 
 @Controller('tasks')
 @UseGuards(AuthGuard())
 export class TasksController {
   private logger = new Logger('TaskController');
 
-  constructor(private tasksService: TasksService) {}
+  constructor(private tasksService: TasksService,private configService:ConfigService) {
+    console.log(configService.get('TEST_VALUE'))
+  }
 
   @Get()
   getTasks(@Query() filterDto: GetTaskFilterDto,@GetUser() user:User ): Promise<Task[]> {
