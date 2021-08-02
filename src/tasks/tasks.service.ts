@@ -5,6 +5,7 @@ import { GetTaskFilterDto } from './dto/get-tasks.filter.dto';
 import { TaskRepository } from './dto/task.repository';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Task } from './dto/task.entity';
+import { User } from 'src/auth/user.entity';
 
 @Injectable()
 export class TasksService {
@@ -76,8 +77,8 @@ export class TasksService {
     //     // its good to return the updated task because the front end will use this returned value to update the UI instead of hitting extra API.
     // }
 
-    createTask(createTaskDto:CreateTaskDto): Promise <Task> {
-        return this.tasksRepository.createTask(createTaskDto)        // its good to return the updated task because the front end will use this returned value to update the UI instead of hitting extra API.
+    createTask(createTaskDto:CreateTaskDto, user:User): Promise <Task> {
+        return this.tasksRepository.createTask(createTaskDto, user)        // its good to return the updated task because the front end will use this returned value to update the UI instead of hitting extra API.
     }
 
     // updateTaskStatus(id: string, status:TaskStatus){

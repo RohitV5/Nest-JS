@@ -1,3 +1,4 @@
+import { User } from "src/auth/user.entity";
 import { EntityRepository, Repository } from "typeorm";
 import { TaskStatus } from "../tasks-status.enum";
 import { CreateTaskDto } from "./create-task.dto";
@@ -25,13 +26,14 @@ export class TaskRepository extends Repository<Task>{
         return tasks;
     }
 
-    async createTask(createTaskDto: CreateTaskDto): Promise<Task> {
+    async createTask(createTaskDto: CreateTaskDto, user:User): Promise<Task> {
         const {title, description}  = createTaskDto;
         // when key and argument have same value we can use a shorthand. ES6 Feature
         const task: Task = this.create({
             title,
             description,
-            status: TaskStatus.OPEN
+            status: TaskStatus.OPEN,
+            user:user
         })
 
         await this.save(task)
